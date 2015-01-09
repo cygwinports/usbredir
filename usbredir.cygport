@@ -1,0 +1,21 @@
+NAME="usbredir"
+VERSION=0.7
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="USB redirection protocol library"
+DESCRIPTION="usbredir is a network protocol for sending usb device traffic over
+a network connection. This package offering a parsing library, a usbredirhost
+library and several utilities implementing this protocol."
+HOMEPAGE="http://www.spice-space.org/page/UsbRedir"
+SRC_URI="http://spice-space.org/download/usbredir/usbredir-${VERSION}.tar.bz2"
+PATCH_URI="0.7-cygwin.patch"
+
+PKG_NAMES="usbredir libusbredir1 libusbredir-devel"
+usbredir_CATEGORY="Net"
+usbredir_SUMMARY=${SUMMARY/library/server}
+usbredir_CONTENTS="usr/sbin/usbredir*.exe usr/share/doc/ usr/share/man/man1/"
+libusbredir1_CONTENTS="usr/bin/cygusbredir*-1.dll"
+libusbredir_devel_CONTENTS="usr/include/usbredir*.h usr/lib/libusbredir*.dll.a
+	usr/lib/pkgconfig/libusbredir*.pc"
+
+KEEP_LA_FILES=none

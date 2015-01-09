@@ -1,0 +1,11 @@
+--- origsrc/usbredir-0.7/configure.ac	2014-05-21 08:27:39.000000000 -0500
++++ src/usbredir-0.7/configure.ac	2015-01-09 12:58:40.239660300 -0600
+@@ -29,7 +29,7 @@ dnl AC_DEFINE(_GNU_SOURCE, [1], [Enable
+ AC_MSG_CHECKING([for native Win32])
+ echo "host is $host"
+ case "$host" in
+-     *mingw*|*cygwin*)
++     *mingw*)
+         os_win32=yes
+         ;;
+      *)
